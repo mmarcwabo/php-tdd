@@ -17,4 +17,9 @@ class Square extends Shape {
         $squareArea = pow($this->sideLength, 2);
         return $squareArea;
     }
+
+    public function getSquareOutline()
+    {
+        return $this->getSideLength() * 4;
+    }
 }

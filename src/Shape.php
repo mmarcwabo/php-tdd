@@ -49,9 +49,11 @@ class Shape {
     {
         $shapeOutline = 0;
         if ($this->getShapeType() == 'circle') {
-            $shapeOutline = pi() * $this->getShapeDimension() * 2;
+            $shape = new Circle($this->getShapeDimension());
+            $shapeOutline = $shape->getCircleOutline();
         } else if ($this->getShapeType() == 'square') {
-            $shapeOutline = $this->getShapeDimension() * 4;
+            $shape = new Square($this->getShapeDimension());
+            $shapeOutline = $shape->getSquareOutline();
         } else {
             $shapeOutline = -1;
         }

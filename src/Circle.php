@@ -17,4 +17,9 @@ class Circle extends Shape {
     {
         return pi() * pow($this->getRadius(), 2);        
     }
+
+    public function getCircleOutline()
+    {
+        return pi() * $this->getRadius() * 2;
+    }
 }
