@@ -1,15 +1,20 @@
 <?php
 class Circle extends Shape {
+
     private $radius;
+
+    public function __construct($radius)
+    {
+        $this->radius = $radius;
+    }
 
     public function getRadius()
     {
         return $this->radius;
     }
 
-    public function getSquareArea()
+    public function getCircleArea()
     {
-        $squareArea = M_PI * ($this->radius ^ 2);
-        return $squareArea;
+        return pi() * pow($this->getRadius(), 2);        
     }
 }
